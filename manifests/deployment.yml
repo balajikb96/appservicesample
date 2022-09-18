@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: balajikbappservicesample 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: balajikbappservicesample
+  template:
+    metadata:
+      labels:
+        app: balajikbappservicesample 
+    spec:
+      containers:
+        - name: balajikbappservicesample 
+          image: faizz.azurecr.io/balajikbappservicesample
+          ports:
+          - containerPort: 80
